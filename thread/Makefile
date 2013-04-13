@@ -15,6 +15,7 @@ timed_mutex:timed_mutex.o
 	$(CC) -o $@ timed_mutex.o $(LIBS)
 call_once:call_once.o
 	$(CC) -o $@ call_once.o $(LIBS)
+<<<<<<< HEAD
 #@echo "\$$@=$@"
 #@echo "\$$^=$^"
 
@@ -22,6 +23,12 @@ call_once:call_once.o
 	$(CC) -o $@ $(CCFLAGS) $^
 clean: 
 	rm $(BIN) $(OBJS)
+=======
+%.o: %.cpp 
+	$(CC) -o $@ $(CCFLAGS) $^
+clean: 
+	rm $(BIN) 
+>>>>>>> 30f636da2c05447e32f6e488b1c965baf6d06c45
 debug:
 	@echo "BIN=$(BIN)"
 	@echo "OBJS=$(OBJS)"
